@@ -20,8 +20,8 @@ window.addEventListener("resize", () => {
 });
 
 const scriptTag = document.querySelector("script[data-flake]");
-const flakeType = scriptTag ? scriptTag.getAttribute("data-flake") : "default";
-console.log(flakeType);
+const flakeType = scriptTag ? scriptTag.getAttribute("data-flake") : "snowflake";
+console.log("Type of flakes", flakeType);
 
 const snowflakes = [];
 const numberOfSnowflakes = 100;

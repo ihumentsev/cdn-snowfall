@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #11112B;
+    background-image: url("https://cdn.pixabay.com/photo/2015/11/26/12/11/happy-new-year-1063797_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.content-container{
+    position: relative;
+    width: fit-content; 
+    height: 200px;
+    border-radius: 25px;
+    border: 1px solid  rgba(255, 255, 255, 0.20);
+    background:  linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.10) 100%);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.text{
+    color:  #FFF;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
+
+.image{
+    position: absolute;
+    width: 400px;
+    right: -170px;
+    top: -200px;
+    transform: rotate(18deg);
+}
