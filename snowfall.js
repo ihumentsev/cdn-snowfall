@@ -35,7 +35,7 @@ for (let i = 0; i < numberOfSnowflakes; i++) {
     speedY: Math.random() * 1 + 0.5,
     speedX: Math.random() * 0.5,
     opacity: Math.random() * 0.8 + 0.2,
-    type: flakeType, // Указываем тип снежинки
+    type: flakeType, 
   });
 }
 
@@ -55,35 +55,31 @@ function drawSnowflakes() {
   snowflakes.forEach((flake) => {
     updateSnowflake(flake);
 
-    // Проверка на тип снежинки и отрисовка соответствующего типа
+    
     if (flake.type === "snowflake") {
       ctx.font = `${flake.size}px Arial`;
       ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
-      // Добавление тени
-      ctx.shadowColor = "rgba(0, 0, 0, 0.5)"; // Цвет тени
-      ctx.shadowBlur = 3; // Размытие тени
-      ctx.shadowOffsetX = 1; // Смещение тени по горизонтали
-      ctx.shadowOffsetY = 1; // Смещение тени по вертикали
-      ctx.fillText("❄", flake.x, flake.y); // Символ снежинки
+      ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+      ctx.shadowBlur = 3; 
+      ctx.shadowOffsetX = 1; 
+      ctx.shadowOffsetY = 1;
+      ctx.fillText("❄", flake.x, flake.y); 
     } else if (flake.type === "circle") {
       ctx.beginPath();
       ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
-      // Добавление тени
-      ctx.shadowColor = "rgba(0, 0, 0, 0.5)"; // Цвет тени
-      ctx.shadowBlur = 3; // Размытие тени
-      ctx.shadowOffsetX = 1; // Смещение тени по горизонтали
-      ctx.shadowOffsetY = 1; // Смещение тени по вертикали
+      ctx.shadowColor = "rgba(0, 0, 0, 0.5)"; 
+      ctx.shadowBlur = 3; 
+      ctx.shadowOffsetX = 1; 
+      ctx.shadowOffsetY = 1; 
       ctx.fill();
     } else if (flake.type === "star") {
-      // Для звездочки рисуем звезду
       ctx.font = `${flake.size}px Arial`;
       ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
-      // Добавление тени
-      ctx.shadowColor = "rgba(0, 0, 0, 0.5)"; // Цвет тени
-      ctx.shadowBlur = 3; // Размытие тени
-      ctx.shadowOffsetX = 1; // Смещение тени по горизонтали
-      ctx.shadowOffsetY = 1; // Смещение тени по вертикали
+      ctx.shadowColor = "rgba(0, 0, 0, 0.5)"; 
+      ctx.shadowBlur = 3; 
+      ctx.shadowOffsetX = 1; 
+      ctx.shadowOffsetY = 1; 
       ctx.fillText("★", flake.x, flake.y);
     }
   });
